@@ -264,6 +264,9 @@ const strictlyEquals = createUtility(strictlyEquals_definition)
 import transformProperties_definition from './lib/definitions/transform-properties'
 const transformProperties = createUtility(transformProperties_definition)
 
+import truncateToNChars_definition from './lib/definitions/truncate-to-n-chars'
+const truncateToNChars = createUtility(truncateToNChars_definition)
+
 import truncateToNLines_definition from './lib/definitions/truncate-to-n-lines'
 const truncateToNLines = createUtility(truncateToNLines_definition)
 
@@ -359,6 +362,7 @@ export {
   startsWith,
   strictlyEquals,
   transformProperties,
+  truncateToNChars,
   truncateToNLines,
   unique,
 }
