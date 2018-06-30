@@ -9,7 +9,8 @@
     "clone-deep": "github:olsonpm/clone-deep",
     "dedent": "^0.7.0",
     "object-inspect": "^1.5.0",
-    "type-detect": "github:olsonpm/type-detect#buffer-type-added"
+    "type-detect": "github:olsonpm/type-detect#buffer-type-added",
+    "universal-eol": "0.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.42",
