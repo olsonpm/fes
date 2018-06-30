@@ -141,6 +141,12 @@ const invokeAt = createUtility(invokeAt_definition)
 import invoke_definition from './lib/definitions/invoke'
 const invoke = createUtility(invoke_definition)
 
+import isBetweenExclusive_definition from './lib/definitions/is-between-exclusive'
+const isBetweenExclusive = createUtility(isBetweenExclusive_definition)
+
+import isBetweenInclusive_definition from './lib/definitions/is-between-inclusive'
+const isBetweenInclusive = createUtility(isBetweenInclusive_definition)
+
 import isEmpty_definition from './lib/definitions/is-empty'
 const isEmpty = createUtility(isEmpty_definition)
 
@@ -321,6 +327,8 @@ export {
   hasOwnEnumerableKey,
   invokeAt,
   invoke,
+  isBetweenExclusive,
+  isBetweenInclusive,
   isEmpty,
   isFalsey,
   isGreaterThan,
