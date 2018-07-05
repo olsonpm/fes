@@ -66,6 +66,9 @@ const containedIn = createUtility(containedIn_definition)
 import containsAll_definition from './lib/definitions/contains-all'
 const containsAll = createUtility(containsAll_definition)
 
+import containsAny_definition from './lib/definitions/contains-any'
+const containsAny = createUtility(containsAny_definition)
+
 import containsOnly_definition from './lib/definitions/contains-only'
 const containsOnly = createUtility(containsOnly_definition)
 
@@ -302,6 +305,7 @@ export {
   construct_1arg,
   containedIn,
   containsAll,
+  containsAny,
   containsOnly,
   contains,
   discardAll,
