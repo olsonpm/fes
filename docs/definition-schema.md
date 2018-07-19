@@ -55,27 +55,6 @@
   `alwaysReturn` and `passThrough`.  Eventually these may be ported to a
   separate utility library, but for now this is the method for declaring them
 
-#### shouldThrowOnExtraDataArguments
-- type: boolean (defaults to true)
-- description: some utilities are often used in contexts where many arguments
-  are passed.  Without getting too deep into 'why' this is not cleanly
-  avoidable, this flag lets us say "this utility should ignore extra data
-  arguments".  One instance is `assignOver` which we might place in a mapper
-  function.  It should ignore the extra parameters such as 'index' and
-  'collection' and just assign the values over the original value.
-
-#### shouldThrowOnExtraServiceArguments
-- type: boolean (defaults to true)
-- description: remember that the default case for utility function signatures is
-  `aUtilityFunction(...serviceArguments)(dataArgument)`.  It is common to call
-  aUtilityFunction with serviceArguments and pass the result to a mapper or
-  reducer function.  In that case we want to set
-  `shouldThrowOnExtraDataArguments = false`.  Now take this same example but for
-  a [flipped](#flippedfrom) utility.  In this case we might call
-  aUtilityFunction with a dataArgument and pass the result to a mapper function.
-  Here we would want to set `shouldThrowOnExtraServiceArguments = false`.  An
-  example of this is `getValueFrom` which is flippedFrom `getValueAt`.
-
 #### transformServiceArguments
 - type: array or object of functions (where an object would have the argument
   indices as keys which are implicit with arrays.  This is more readable if you
@@ -142,11 +121,6 @@
 - description: currently unused but I know it will be useful when I decide to
   add asynchronous utilities.  I added knowledge of this to the code because I
   didn't want to have to refactor a lot of error handling in the future.
-
-#### isDataFirst
-- type: boolean (defaults to false)
-- description: currently unused.  Indicates whether a utility's data argument
-  comes before the service arguments.
 
 <br>
 

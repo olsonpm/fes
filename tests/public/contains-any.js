@@ -70,4 +70,17 @@ suite('containsAll', () => {
     willTheyHaveAGoodPicnic(personToFoodBrought.organized).should.be.true
     willTheyHaveAGoodPicnic(personToFoodBrought.unorganized).should.be.false
   })
+
+  //
+  // TODO: revisit this test - 'twas rushed
+  //
+  test('string', () => {
+    const originalFile = 'index.js',
+      minifiedFile = 'index.min.js',
+      packedFile = 'index.pack.js'
+
+    containsAny(['.min.', '.pack.'])(originalFile).should.be.false
+    containsAny(['.min.', '.pack.'])(minifiedFile).should.be.true
+    containsAny(['.min.', '.pack.'])(packedFile).should.be.true
+  })
 })

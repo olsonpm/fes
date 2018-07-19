@@ -50,4 +50,15 @@ suite('contains', () => {
     doesSomeoneLikePizza(favoriteFood.group1).should.be.true
     doesSomeoneLikePizza(favoriteFood.group2).should.be.false
   })
+
+  //
+  // TODO: revisit this test - 'twas rushed
+  //
+  test('string', () => {
+    const originalFile = 'index.js',
+      minifiedFile = 'index.min.js'
+
+    contains('.min.')(originalFile).should.be.false
+    contains('.min.')(minifiedFile).should.be.true
+  })
 })
