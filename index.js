@@ -171,6 +171,9 @@ const isTruthy = createUtility(isTruthy_definition)
 import join_definition from './lib/definitions/join'
 const join = createUtility(join_definition)
 
+import keepAll_definition from './lib/definitions/keep-all'
+const keepAll = createUtility(keepAll_definition)
+
 import keepFirst_definition from './lib/definitions/keep-first'
 const keepFirst = createUtility(keepFirst_definition)
 
@@ -340,6 +343,7 @@ export {
   isLessThan,
   isTruthy,
   join,
+  keepAll,
   keepFirst,
   keepIntersection,
   keepWhen,
