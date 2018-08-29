@@ -7,28 +7,15 @@ printUsage() {
   printf "./run <command>\\n\\n"
   echo   "where <command> is one of:"
   echo   "  lint"
-  echo   "  test"
-  echo   "  watch-lib"
-  printf "  write-entry\\n\\n"
-}
-
-writeEntry() {
-  node ./build/write-entry/run
+  printf "  test\\n\\n"
 }
 
 case "${command}" in
   test)
-    writeEntry
-    npx mocha --require 'esm' --ui tdd "$@" -- tests/public ;;
+    ./node_modules/.bin/mocha --require 'esm' --ui tdd "$@" -- "tests/index.js" ;;
 
   lint)
-    npx eslint lib build tests ;;
-
-  watch-lib)
-    node ./build/watch-lib/run ;;
-
-  write-entry)
-    writeEntry ;;
+    ./node_modules/.bin/eslint create-utility lib tests index.js ;;
 
   '')
     printf "'run' requires a command\\n\\n"

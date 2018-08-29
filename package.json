@@ -1,31 +1,29 @@
 {
   "name": "fes",
   "version": "0.1.0",
-  "description": "A configurable, modular, functional utility belt that consumes native javascript constructs",
-  "module": "index.js",
-  "author": "Phil Olson",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "phil olson",
   "license": "SEE LICENSE IN license.txt",
   "dependencies": {
-    "clone-deep": "github:olsonpm/clone-deep",
-    "dedent": "^0.7.0",
-    "object-inspect": "^1.5.0",
-    "type-detect": "github:olsonpm/type-detect#buffer-type-added",
+    "clone-deep": "github:olsonpm/clone-deep#snapshot-for-fes",
+    "tedent": "github:olsonpm/tedent#snapshot-for-fes",
+    "type-detect": "^4.0.8",
     "universal-eol": "0.0.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.42",
     "chai": "^4.1.2",
-    "chai-things": "^0.2.0",
-    "chalk": "^2.3.2",
-    "deep-eql": "github:olsonpm/deep-eql#fix-lastindex",
-    "eslint": "^4.19.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^5.1.0",
     "eslint-config-personal": "github:olsonpm/eslint-config-personal",
-    "eslint-plugin-import": "^2.9.0",
-    "esm": "^3.0.14",
-    "mocha": "^5.0.4",
-    "pify": "^3.0.0",
-    "prettier": "^1.11.1",
-    "sane": "^2.4.1"
+    "eslint-plugin-import": "^2.13.0",
+    "esm": "^3.0.80",
+    "mocha": "^5.2.0",
+    "prettier": "^1.14.2"
+  },
+  "scripts": {
+    "test": "echo \"Tests can be ran via './run test'\""
   },
   "eslintConfig": {
     "extends": [
@@ -34,24 +32,13 @@
       "plugin:import/warnings"
     ],
     "env": {
+      "browser": false,
       "mocha": true
-    },
-    "rules": {
-      "no-use-before-define": [
-        "error",
-        "nofunc"
-      ],
-      "no-confusing-arrow": "error"
     }
   },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "es5",
     "semi": false
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
   }
 }
